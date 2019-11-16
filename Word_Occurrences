@@ -11,22 +11,33 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 /**
+ * Constructor for Word_Occurrences
  * 
- * @author XinDes 
- * Date: 10/22/2019 
- * Program Name: Word_Occurrences 
- * Purpose: revamp in order to directly use an input and string along the information to an output.
+ * @author Xinhui Shi
+ * @see Date: 10/22/2019
+ * @see Program Name: Word_Occurrences
+ * @see Purpose: Analyze a text file to find how many times each word appears
+ * 
+ * @version 3
+ * 
  */
 public class Word_Occurrences {
 
+	
+
 	/**
-	 * Main program. Passthrough a file location of type ".txt" into the method.
-	 * This will output the top 20 most occurred words along with how many times it appear in an ArrayList of type String.
-	 * @param file String variable that is needed to find the file location.
-	 * @return ArrayList<String> output in String.format of " %s : %s"
+	 * Gets the top 20 word occurrence from a text file.
+	 * 
+	 * @param file Location of the text file.
+	 * @return ArrayList<String> in String.format of " %s : %s" of top 20
 	 */
 	public ArrayList<String> wordOccur(String file) {
 
+		/*
+		 * Main program. Passthrough a file location of type ".txt" into the method.
+		 * This will output the top 20 most occurred words along with how many times it
+		 * appear in an ArrayList of type String.
+		 */
 		try {
 
 			String fileLocation = file;
