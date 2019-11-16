@@ -1,0 +1,41 @@
+package src;
+
+import static org.junit.Assert.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.junit.Test;
+
+/**
+ * Junit testing for Word_Occurences
+ * 
+ * @author Xinhui Shi
+ * @see Date: 10/23/2019 
+ * @see Program Name: JunitWordOccurTesting
+ * @see Purpose: To test the output of the Word_Occurrences.java program. This test the whole string, NOT each bits.
+ * 
+ */
+public class JunitWordOccurTesting {
+
+	@Test
+	public void test() {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Where is the file address?: ");
+		Word_Occurrences test = new Word_Occurrences();
+		// Alternative:
+		// ArrayList<String> output = test.wordOccur(D:\test.txt));
+		ArrayList<String> output = test.wordOccur(input.nextLine());
+		input.close();
+		String[] actual = { "the : 732", "and : 565", "to : 384", "i : 372", "of : 343", "macbeth : 287", "a : 249",
+				"that : 237", "is : 229", "in : 207", "you : 206", "my : 192", "not : 165", "it : 154", "with : 154",
+				"his : 146", "be : 139", "have : 125", "he : 125", "but : 124" };
+
+		for (int i = 0; i < actual.length; i++) {
+			assertEquals(output.get(i), actual[i]);
+
+		}
+
+	}
+
+}
